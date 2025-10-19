@@ -23,8 +23,20 @@
 
     <div class="navbar">
         <div id="logo"><b>PEDRO EUSTÁQUIO</b></div>
+        
+        <!-- Botão Switch Modo Claro/Escuro -->
+        <div class="theme-switch-container">
+            <img src="Skill/SolBranco.png" alt="" width="50px" class="iconSol">
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch-input">
+                <label for="theme-switch" class="theme-switch-label">
+                    <div class="theme-slider"></div>
+                </label>
+            </div>
+            <img src="Skill/LuaBranco.png" alt="" width="50px" class="iconLua">
+        </div>
+        
         <div id="separar">
-            
             <div id="Home">Home</div>
             <div id="Sobre">Sobre</div>
             <div id="Portfolio">Portfólio</div>
@@ -159,9 +171,11 @@
                 </section>
             </section>
         </div>
+        <!--
         <div id="projetosD" class="Shidden">
 
             <img src="img/sitejogosfull.png" alt="" id="JogoImg">
+            
             <section id="site-projeto">
                 <section class="tit">
                     <h1 id="hLDJogos">Loja de Jogos</h1>
@@ -183,7 +197,9 @@
                     <span><a href="https://github.com/PedroEustaq/Loja-de-Jogos">REPOSITÓRIO</a></span>
                 </section>
             </section>
+            
         </div>
+        -->
         <div id="projetosD" class="Shidden">
 
             <img src="img/junior.png" alt="">
@@ -281,8 +297,29 @@
 -->
 
 
-<section>
-    opaaa
+<section class="EntreEmContato">
+    <div class="painelContato">
+        <div class="painelCabecalhu">
+            <div class="bolinhas">
+                <div class="bolinhasPonto"></div>
+                <div class="bolinhasPonto"></div>
+                <div class="bolinhasPonto"></div>
+                <div class="bolinhasPonto"></div>
+            </div>
+            <h2>ENTRE EM CONTATO</h2>
+        </div>
+        
+        <form class="formis">
+            <div class="input-row">
+                <input type="text" placeholder="Nome" class="form-input" required>
+                <input type="email" placeholder="Email" class="form-input" required>
+            </div>
+            
+            <textarea placeholder="Digite nesse campo" class="form-textarea" rows="6" required></textarea>
+            
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </div>
 </section>
         <div class="final">
             <!--<span>&copy; Pedro Eustáquio</span> -->

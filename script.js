@@ -161,3 +161,72 @@ function clickfront() {
     window.open("https://www.frontendmentor.io/profile/PedroEustaq")
 }
 
+// ===== THEME SWITCH FUNCTIONALITY =====
+
+// Função para alternar entre modo claro e escuro
+function toggleTheme() {
+    const body = document.body;
+    const themeSwitch = document.getElementById('theme-switch');
+    
+    // Alternar a classe light-mode no body
+    body.classList.toggle('light-mode');
+    
+    // Salvar preferência no localStorage
+    if (body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+        console.log('Modo claro ativado');
+    } else {
+        localStorage.setItem('theme', 'dark');
+        console.log('Modo escuro ativado');
+    }
+}
+
+// Função para carregar tema salvo
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const themeSwitch = document.getElementById('theme-switch');
+    
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        themeSwitch.checked = true; // Switch ativo para modo claro
+    } else {
+        document.body.classList.remove('light-mode');
+        themeSwitch.checked = false; // Switch inativo para modo escuro
+    }
+}
+
+// Adicionar evento ao switch quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    // Carregar tema salvo
+    loadTheme();
+    
+    // Adicionar evento de clique ao switch
+    const themeSwitch = document.getElementById('theme-switch');
+    if (themeSwitch) {
+        themeSwitch.addEventListener('change', toggleTheme);
+        console.log('Switch de tema carregado e configurado');
+    } else {
+        console.error('Elemento theme-switch não encontrado!');
+    }
+    
+    // Teste: verificar se a classe está sendo aplicada
+    setTimeout(() => {
+        console.log('Classe do body:', document.body.className);
+        console.log('Switch checked:', themeSwitch ? themeSwitch.checked : 'não encontrado');
+    }, 100);
+});
+
+// Função adicional para detectar preferência do sistema
+function detectSystemTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        // Se não houver preferência salva, usar preferência do sistema
+        if (!localStorage.getItem('theme')) {
+            document.body.classList.add('light-mode');
+            document.getElementById('theme-switch').checked = false;
+        }
+    }
+}
+
+// Detectar preferência do sistema ao carregar
+document.addEventListener('DOMContentLoaded', detectSystemTheme);
+

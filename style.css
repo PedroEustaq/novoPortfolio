@@ -11,7 +11,6 @@ body {
     justify-content: start;
     background-color: #1C1C1C;
     width: 100vw;
-    height: 100vh;
     overflow-x: hidden;
     /* background: -webkit-linear-gradient(90deg, #141414,#0e4200);/* Chrome 10-25, Safari 5.1-6 */
     /* background: linear-gradient(90deg, #141414,#0e4200);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -42,12 +41,8 @@ img.nextI {
 div#projetosD > img#JogoImg {
     width: 60%;
 }
-#LanF {
-    
-}
 main {
     width: 75vw;
-    height: 10080px;
     color: white;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -147,7 +142,9 @@ section#imgMar>img {
     border-radius: 1000px;
     width: 350px;
 }
-
+section#imgMar a {
+    color: rgb(134, 255, 130);
+}
 section#imgMar {
 
     overflow: hidden;
@@ -252,7 +249,7 @@ section#quemsouEu {
 }
 
 section#quemsouEu>h1 {
-    font-size: 60px;
+    font-size: 70px;
     animation-name: aparecerSuave;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -400,6 +397,331 @@ div#projetosD>h1 {
     align-items: center;
     padding-bottom: 0px;
     padding-top: 0px;
+}
+
+/* ===== THEME SWITCH ===== */
+.theme-switch-container {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.theme-toggle {
+    position: relative;
+}
+
+.theme-switch-input {
+    display: none;
+}
+
+.theme-switch-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 35px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.sun-icon {
+    font-size: 16px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.moon-icon {
+    font-size: 16px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.theme-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 29px;
+    height: 29px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+/* Estado ativo (modo claro) */
+.theme-switch-input:checked + .theme-switch-label {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+}
+
+.theme-switch-input:checked + .theme-switch-label .theme-slider {
+    transform: translateX(45px);
+}
+
+/* Hover effect */
+
+
+/* ===== MODO CLARO ===== */
+body.light-mode {
+    background: linear-gradient(135deg, #4fff5e, #05d89c);
+    color: #333;
+}
+body.light-mode .bolinhasPonto {
+    background: linear-gradient(135deg, #4fff5e, #05d89c);
+}
+body.light-mode .navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #logo {
+    color: #2c3e50;
+    text-shadow: none;
+}
+
+body.light-mode .navbar>div#separar>div {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #e9ecef;
+}
+
+body.light-mode .navbar>div#separar>div:hover {
+    background-color: #4fff5e;
+    color: #000;
+    border: 1px solid #4fff5e;
+}
+
+body.light-mode main {
+    color: #333;
+}
+
+body.light-mode div#contain {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode div#textReal {
+    background-color: #ffffff;
+    color: #333;
+    border-left: #4fff5e solid 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode div#Academicos {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode div#projetosD {
+    background-color: #ffffff;
+    border-right: #4fff5e 5px solid;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .painelContato {
+    background: white;
+    box-shadow: 0 15px 35px rgba(79, 255, 94, 0.4);
+}
+
+body.light-mode .form-input,
+body.light-mode .form-textarea {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #e9ecef;
+}
+
+body.light-mode .form-input:focus,
+body.light-mode .form-textarea:focus {
+    border-color: #4fff5e;
+    box-shadow: 0 6px 20px rgba(79, 255, 94, 0.2);
+}
+body.light-mode .iconSol {
+    content: url("Skill/SolPreto.png");
+}
+
+body.light-mode .iconLua {
+    content: url("Skill/LuaPreto.png");
+}
+body.light-mode div.final {
+    background: #272727;
+    color: #333;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode div.meio {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+/* Textos específicos no modo claro */
+body.light-mode p#pSou {
+    color: #333;
+}
+
+body.light-mode h1#ProJ {
+    color: #333;
+}
+
+body.light-mode h1 {
+    color: #333;
+}
+
+body.light-mode h2 {
+    color: #333;
+}
+
+body.light-mode p {
+    color: #555;
+}
+
+body.light-mode section#quemsouEu>h1 {
+    color: #2c3e50;
+    text-shadow: none;
+}
+
+body.light-mode section#quemsouEu>h2 {
+    color: #34495e;
+}
+
+
+body.light-mode .maisT {
+    color: #555;
+}
+
+body.light-mode section.tit>h1 {
+    color: #333;
+}
+
+body.light-mode h1#hLan {
+    color: #0056b3;
+    text-shadow: 0px 0px 5px rgba(0, 86, 179, 0.3);
+}
+
+body.light-mode h1#hLDJogos {
+    color: #333;
+    background-color: transparent;
+    border: 1px solid #4fff5e;
+}
+
+body.light-mode h1#hJun {
+    color: #dc3545;
+    text-shadow: 0px 0px 5px rgba(220, 53, 69, 0.3);
+}
+
+body.light-mode h1#hJun1 {
+    color: #ffc107;
+    text-shadow: 0px 0px 5px rgba(255, 193, 7, 0.3);
+}
+
+body.light-mode div#Conhecer p {
+    color: #555;
+}
+
+body.light-mode section#confeRepo>span {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode section#confeRepo>span:hover {
+    background-color: rgba(79, 255, 94, 0.1);
+}
+
+body.light-mode section#confeRepo>span.visitabtn {
+    background-color: #0056b3;
+    color: white;
+}
+
+body.light-mode .IconeSkillszinha>p {
+    color: #ffffff;
+}
+
+body.light-mode div#infoC>h2 {
+    color: #333;
+}
+
+body.light-mode section#umaRede {
+    color: #333;
+}
+
+body.light-mode section#umaRede a {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Links no modo claro */
+body.light-mode a {
+    color: #0056b3;
+}
+
+body.light-mode section#imgMar a {
+    color: #2e4aff;
+}
+
+/* Botões no modo claro */
+body.light-mode div#Conhecer>button {
+    color: #333;
+    border: 1px solid #4fff5e;
+    background-color: transparent;
+}
+
+body.light-mode div#Conhecer>button:hover {
+    background-color: #4fff5e;
+    color: #000;
+}
+
+/* Scrollbar no modo claro */
+body.light-mode ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+    background: #4fff5e;
+    border-radius: 5px;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb:hover {
+    background: #05d89c;
+}
+
+/* Responsividade para o switch */
+@media (max-width: 768px) {
+    .theme-switch-container {
+        margin: 0 10px;
+    }
+    
+    .theme-switch-label {
+        width: 70px;
+        height: 30px;
+    }
+    
+    .theme-slider {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .theme-switch-input:checked + .theme-switch-label .theme-slider {
+        transform: translateX(40px);
+    }
+    
+    .sun-icon, .moon-icon {
+        font-size: 14px;
+    }
 }
 #logo {
     color: #4fff5e;
@@ -1168,7 +1490,7 @@ div#areaDosCertificados {
 
 div.final {
     border-radius: 3px;
-    margin-top: 20px;
+    margin-top: 2px;
     width: 100%;
     max-width: 1520px;
     background: #0e0e0e;
@@ -1381,4 +1703,191 @@ div#SkillDeco > img {
 
 section#confeRepo>span.visitabtn {
     background-color: #0056b3;
+}
+
+/* ===== SEÇÃO ENTRE EM CONTATO ===== */
+.EntreEmContato {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    padding-bottom: 0px;
+    margin-top: 40px;
+}
+
+.painelContato {
+    background: linear-gradient(135deg, #4fff5e, #05d89c);
+    border-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 30px;
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(79, 255, 94, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.painelCabecalhu {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 30px;
+}
+
+.bolinhas {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.bolinhasPonto {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.painelCabecalhu h2 {
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: start;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.formis {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-input::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.form-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-textarea {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-textarea::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.form-textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn {
+    align-self: flex-end;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 44, 44, 0.3);
+}
+
+
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(44, 44, 44, 0.3);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .painelContato {
+        margin: 20px;
+        padding: 25px;
+        border-radius: 20px;
+    }
+    
+    .painelCabecalhu h2 {
+        font-size: 24px;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-input, .form-textarea {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    .submit-btn {
+        align-self: center;
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .EntreEmContato {
+        padding: 20px 10px;
+    }
+    
+    .painelContato {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .painelCabecalhu h2 {
+        font-size: 20px;
+    }
+    
+    .bolinhasPonto {
+        width: 10px;
+        height: 10px;
+    }
 }
