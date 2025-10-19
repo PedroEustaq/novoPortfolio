@@ -1,0 +1,23 @@
+@media (min-width: 769px) and (max-width: 1024px) { 
+    main {
+        width: 95%;
+    }
+    h1#hJun1 {
+        font-size: 4vw;
+    }
+    div#SkillDeco > img {
+        width: 110px;
+    }
+    div#Flutuante {
+        align-items: flex-end;
+    }
+    div#Flutuante > img {
+        height: 155px;
+    }
+    section#quemsouEu > h1 {
+        font-size: 5vw;
+    }
+    div#informac {
+        width: 100%;
+    }
+}

@@ -1,0 +1,287 @@
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    div#contain {
+        flex-flow: column nowrap;
+        margin-top: 0px;
+        height: 750px;
+        animation-name: none;
+    }
+.Shidden {
+    opacity: 1;
+    filter: blur(0px);
+}
+    div#informac {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 90%;
+        border-radius: 20px;
+        padding: 50px;
+        padding-bottom: 20px;
+        animation-name: none;
+        padding-top: 20px;
+        margin-top: 10px;
+        padding-right: 0px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        justify-self: center;
+        align-self: center;
+        background-color: rgba(0, 0, 0, 0.221);
+        border: 0.1px solid rgba(255, 255, 255, 0.074);
+        line-height: 2.5em;
+    }
+
+    h1#hLan {
+        font-size: 43px;
+    }
+
+    section#quemsouEu>h1 {
+        font-size: 36px;
+        animation: none !important;
+        transition: none !important;
+
+    }
+
+    section#quemsouEu>h2 {
+        font-size: 30px;
+        color: white;
+        opacity: 1;
+        animation: none !important;
+        transition: none !important;
+
+    }
+
+    div#qualida {
+        opacity: 1;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    div#qualida>button {
+        opacity: 1;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    section#imgMar>img {
+        width: 300px;
+        border-radius: 0px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    section#imgMar {
+        background-color: transparent;
+        width: 300px;
+    }
+
+    section#conjunto {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    section#botoesRedes {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+
+    div.navbar {
+        display: none;
+    }
+
+    div#contain {
+        flex-flow: column-reverse;
+        align-items: start;
+        justify-content: start;
+    }
+
+    div#textReal {
+        width: 90%;
+        border-top: 0.5px solid rgba(255, 255, 255, 0.393);
+        border-right: 0.5px solid rgba(255, 255, 255, 0.393);
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.393);
+    }
+
+    div#separar {
+        height: 80px;
+    }
+
+    div#separar>h1 {
+        font-size: 41px;
+    }
+
+    div#separar>img {
+        width: 100px;
+        height: 100px;
+    }
+
+    div#projetosD {
+        width: 90%;
+        flex-flow: column nowrap;
+    }
+
+    div#projetosD>img {
+        width: 100%;
+    }
+
+    div#projetosD>img#formIMG {
+        width: 100%;
+    }
+
+    figure {
+        flex-flow: row wrap;
+    }
+
+    section#site-projeto {
+        width: 100%;
+    }
+
+    section#abaSkills {
+        width: 90%;
+    }
+    .hidden {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateX(0px);
+    }
+    section#abaSkills>div#iconesSkil>img {
+        width: 90%
+    }
+
+    div.final {
+        width: 90%;
+        flex-flow: column nowrap;
+    }
+
+    div.final>span {
+        padding: 5px;
+    }
+
+    div.meio {
+        width: 100%;
+    }
+
+    section#umaRede {
+        margin-left: 20px;
+        font-size: 4vw;
+    }
+
+    div.final>h1 {
+        display: none;
+    }
+
+    div#pararUmPouco {
+        width: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 250px;
+    }
+
+    section#desaf {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: start;
+        border-radius: 5px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    section#desaf>img {
+        width: 50px;
+        margin-left: 5px;
+        border: 0px solid white;
+    }
+
+    section#mais {
+        width: 50%;
+        font-size: 17px;
+        transition: none;
+    }
+
+    section#mais:hover {
+        width: 50%;
+    }
+
+    h1#hLDJogos {
+        font-size: 30px;
+    }
+
+    section#ConfiraTambem {
+        width: 100%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    div#Flutuante {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center
+    }
+    div#Flutuante > img {
+        height: 80px;
+    }
+    section#ConfiraTambem > h1 {
+        margin: 0px;
+        padding: 0px;
+        border: 0px solid white;
+        border-radius: 25px;
+        font-size: 15px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    div#projetosD>img#JogoImg {
+        width: 100%;
+    }
+
+    div#Academicos {
+        width: 90%;
+        height: 600px;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div#Conhecer {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div#Conhecer>p {
+        width: 80%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    h1#ProJ {
+        text-align: center;
+    }
+
+    div#SkillDeco>img {
+        width: 100px;
+    }
+
+    div#SkillDeco {
+        transform: translateY(0px);
+        width: 100%;
+    }
+
+}

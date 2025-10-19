@@ -1,0 +1,22 @@
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+    transform: translateX(-100px);
+}
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px);
+}
+.Shidden {
+    opacity: 0;
+    filter: blur(1px);
+    transition: all 1s;
+    margin-left: 0px;
+}
+.apareceSite {
+    opacity: 1;
+    filter: blur(0px);
+    margin-left: 0px;
+}
